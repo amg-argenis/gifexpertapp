@@ -1,4 +1,6 @@
 // este componente unicamente es el que crea la tarjeta con la imagen y el titulo obtenidos de la url
+import PropTypes from 'prop-types';
+
 const GifItem = ({title, url}) => {    
   return (    
     <div className="card">
@@ -7,5 +9,12 @@ const GifItem = ({title, url}) => {
     </div>    
   )
 }
+
+// Tarea, agegar las proptypes y validaciones
+GifItem.prototype = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+}
+
 
 export default GifItem
